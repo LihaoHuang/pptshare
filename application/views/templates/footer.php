@@ -6,7 +6,7 @@
     <script src="../../js/bootstrap.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="j../../s/clean-blog.js"></script>
+    <script src="j../../js/clean-blog.js"></script>
 
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> <!-- or use local jquery -->

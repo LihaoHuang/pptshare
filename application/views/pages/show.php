@@ -50,12 +50,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 // echo anchor('Welcome/filedownload/123','Download');//Test line
                 foreach($filename as $key => $file): #取檔名
                 echo '<tr class="info">';
-                echo '<td class = "col" width = "150vw">'.$key.'</td>';
+                echo '<td class = "col" width = "150vw">'.date("Y/m/d",filemtime("PPT/".$file)).'</td>';
                 echo '<td class = "col" width = "500vw">'.$file.'</td>';
                 echo '<td class = "col">NULL</td>';
                 echo '<td class = "col" width = "150vw">'.anchor('pages/filedownload/'.$file,
                     '<button type="button" class="btn btn-info">Download</button>').'</td>';
                 echo '</tr>';
+                clearstatcache();
                 endforeach;
             ?>
         </table>

@@ -32,7 +32,7 @@ class Pages extends CI_Controller {
     public function filedownload($name)
     {
         $this->load->helper('download');
-        $data = file_get_contents("PPT/".$name);
+        $data = file_get_contents("../PPT/".$name);
         force_download($name,$data,TRUE);
     }
 }
