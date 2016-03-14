@@ -30,6 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             color: deeppink;
         }
     </style>
+    <title><?php echo $title; ?></title>
 </head>
 <body>
     <br><br>
@@ -37,7 +38,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <table class="table table-bordered">
             <tr>
                 <td colspan = 4>
-                    <h1>煞氣M.A.S.E. Lab 分享系統&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?=anchor('create','前往上傳頁面')?><h1>
+                    <h1>煞氣M.A.S.E. Lab 分享系統&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <?=anchor('create','前往上傳頁面')?><h1>
                 </td>
             </tr>
             <tr>
