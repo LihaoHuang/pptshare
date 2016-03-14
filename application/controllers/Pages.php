@@ -32,7 +32,27 @@ class Pages extends CI_Controller {
     public function filedownload($name)
     {
         $this->load->helper('download');
-        $data = file_get_contents("PPT/".$name);
+        $data = file_get_contents("../PPT/".$name);
         force_download($name,$data,TRUE);
+    }
+
+     public function file_upload()
+    {
+        $config = array();
+        $config['upload_path']   = './PPT/';
+        $config['allowed_types'] = 'gif|jpg|png';
+        // $config['file_name']     = $fileupload; // $this->$filename
+
+        $this->load->library('upload', $config);
+        
+        if(!$this->upload->do_upload('fileupload')){         
+            // 顯示上傳錯誤
+               show_error($this->upload->display_errors());
+        }
+        else {
+            // 若無錯誤，則上傳檔案
+            $file = $this->upload->data('fileupload');
+            view(show);
+        }
     }
 }
