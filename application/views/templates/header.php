@@ -12,19 +12,19 @@
     <title><?php echo $title; ?></title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap.theme.css" rel="stylesheet">
+    <link href="../../publish/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../publish/css/bootstrap.theme.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/clean-blog.min.css" rel="stylesheet">
-    <link href="css/clean-blog.theme.css" rel="stylesheet">
+    <link href="../../css/clean-blog.min.css" rel="stylesheet">
+    <link href="../../css/clean-blog.theme.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-    
+
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -34,7 +34,4 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-</head>
-
-<body>
 
