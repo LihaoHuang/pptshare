@@ -1,11 +1,30 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
+<style type="text/css">
+    .bordow {
+        border-top-style:solid;
+        border-left-style:solid;
+        border-right-style:solid;
+        /* background-color: oldlace; */
+    }
+    .borup {
+        border-bottom-style:solid;
+        border-left-style:solid;
+        border-right-style:solid;
+        /* background-color: oldlace; */
+    }
+    .bor {
+        border-style:solid;
+    }
+
+</style>
 <body>
+<br><br><br><br>
 <!-- Page Header -->
 <div class="container">
     <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 bor">
             <div class="page-heading">
                 <h1>上傳 PPT</h1>
             </div>
@@ -15,11 +34,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- Main Content -->
 <div class="container">
     <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 borup">
             <div class="row control-group">
                 
                 <div class="form-group col-xs-12  controls">
-                    <label for="date"><h3>報告日期: </h2></label>
+                    <label for="date"><h3>報告日期: </h3></label>
                     <input id="date" class="form-control" placeholder="yyyy/mm/dd"name="date" type="text">
                 </div>
                     
@@ -36,10 +55,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <!-- upload -->
                         <form method="post" action="pages/file_upload" enctype="multipart/form-data">
                             <input type="file" name="fileupload" />
-
+                            <br><br>
                             <div class="row">
                                 <div class="form-group col-xs-12">
-                                    <input class="btn btn-primary" type="submit" value="建立">
+                                    <input class="btn btn-primary btn-lg" type="submit" value="建立">
                                 </div>
                             </div>
                         </form>
