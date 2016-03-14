@@ -38,14 +38,16 @@ class Pages extends CI_Controller {
 
      public function file_upload()
     {
-        $config = array();
-        $config['upload_path']   = './PPT/';
-        $config['allowed_types'] = 'gif|jpg|png';
+        $config = array(
+                'upload_path' => './PPT/',
+                'allowed_types' => 'gif|jpg|png'
+            );
+
         // $config['file_name']     = $fileupload; // $this->$filename
 
         $this->load->library('upload', $config);
-        
-        if(!$this->upload->do_upload('fileupload')){         
+
+        if(!$this->upload->do_upload('fileupload')){
             // 顯示上傳錯誤
                show_error($this->upload->display_errors());
         }

@@ -12,12 +12,12 @@
     <title><?php echo $title; ?></title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../../publish/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../publish/css/bootstrap.theme.css" rel="stylesheet">
+    <link href="<?= base_url("publish/css/bootstrap.min.css")?>" rel="stylesheet">
+    <link href="<?= base_url("publish/css/bootstrap.theme.css")?>" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../../css/clean-blog.min.css" rel="stylesheet">
-    <link href="../../css/clean-blog.theme.css" rel="stylesheet">
+    <link href="<?= base_url("css/clean-blog.min.css")?>" rel="stylesheet">
+    <link href="<?= base_url("css/clean-blog.theme.css")?>" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
