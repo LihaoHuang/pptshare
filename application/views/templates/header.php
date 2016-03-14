@@ -10,10 +10,10 @@
     <meta name="author" content="">
 
     <title><?php echo $title; ?></title>
-
+    
     <!-- Bootstrap Core CSS -->
     <link href="<?= base_url("publish/css/bootstrap.min.css")?>" rel="stylesheet">
-    <link href="<?= base_url("publish/css/bootstrap.theme.css")?>" rel="stylesheet">
+    <link href="<?= base_url("css/bootstrap.theme.css")?>" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="<?= base_url("css/clean-blog.min.css")?>" rel="stylesheet">
