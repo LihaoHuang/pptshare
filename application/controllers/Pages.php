@@ -40,7 +40,7 @@ class Pages extends CI_Controller {
     {
         $config = array(
                 'upload_path' => './PPT/',
-                'allowed_types' => 'gif|jpg|png|txt|ppt|pptx',
+                'allowed_types' => 'ppt|pptx',
                 'overwrite' => TRUE
             );
 
