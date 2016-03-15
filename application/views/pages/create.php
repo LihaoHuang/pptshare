@@ -59,7 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <div class="row">
                                 <div class="form-group col-xs-12">
                                     <input class="btn btn-primary btn-lg" type="submit" value="上傳">
-                                    <button type="button"  onclick="location.href='/show'" class="btn btn-danger btn-lg">取消，回上一頁</button>
+                                    <button type="button"  onclick="location.href='./show'" class="btn btn-danger btn-lg">取消，回上一頁</button>
                                 </div>
                             </div>
                         </form>
