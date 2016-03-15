@@ -42,7 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 borup">
-            
+
             <div class="row control-group">
                 <div class="form-group col-xs-12  controls">
                     <label for="member"><h3>報告組員 : </h3></label>

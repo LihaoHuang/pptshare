@@ -9,8 +9,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?php echo $title; ?></title>
-
     <!-- Bootstrap Core CSS -->
     <link href="<?= base_url("publish/css/bootstrap.min.css")?>" rel="stylesheet">
     <link href="<?= base_url("css/bootstrap.theme.css")?>" rel="stylesheet">

@@ -40,13 +40,13 @@ class Pages extends CI_Controller {
     {
         $config = array(
                 'upload_path' => './PPT/',
-                'allowed_types' => 'gif|jpg|png'
+                'allowed_types' => 'gif|jpg|png|txt|ppt|pptx',
+                'overwrite' => TRUE
             );
 
         // $config['file_name']     = $fileupload; // $this->$filename
 
         $this->load->library('upload', $config);
-
         if(!$this->upload->do_upload('fileupload')){
             // 顯示上傳錯誤
                show_error($this->upload->display_errors());
@@ -54,7 +54,7 @@ class Pages extends CI_Controller {
         else {
             // 若無錯誤，則上傳檔案
             $file = $this->upload->data('fileupload');
-            view(show);
+            redirect('show');
         }
     }
 }
