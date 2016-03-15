@@ -57,11 +57,4 @@ class Pages extends CI_Controller {
             redirect('show');
         }
     }
-
-    public function login()
-    {
-        $this->load->view('templates/header');
-        $this->load->view('pages/login');
-        $this->load->view('templates/footer');
-    }
 }
