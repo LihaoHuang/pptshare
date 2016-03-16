@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         .col {
             font-size: 20px;
             vertical-align: middle;
-            color: deeppink;
+            color: dimgray;
         }
     </style>
     <title><?php echo $title; ?></title>
@@ -53,7 +53,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 foreach($filename as $key => $file): #取檔名
                 echo '<tr class="info">';
                 echo '<td class = "col" width = "150vw">'.date("Y/m/d",filemtime("PPT/".$file)).'</td>';
-                echo '<td class = "col" width = "500vw">'.$file.'</td>';
+                // $file = mb_convert_encoding($file,"BIG5","UTF-8");
+                echo '<td class = "col" width = "500vw">'. pathinfo($file,PATHINFO_FILENAME).'</td>';
                 echo '<td class = "col">NULL</td>';
                 echo '<td class = "col" width = "150vw">'.anchor('pages/filedownload/'.$file,
                     '<button type="button" class="btn btn-info">Download</button>').'</td>';
