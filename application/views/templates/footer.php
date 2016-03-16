@@ -12,6 +12,7 @@
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> <!-- or use local jquery -->
     <script src="<?= base_url("publish/js/jqBootstrapValidation.js")?>"></script>
+    <script type="text/javascript" src="<?=base_url("publish/js/create.js")?>"></script>
 
     <script>
       $(function () { $("input,select,textarea").not("[type=submit]").jqBootstrapValidation(); } );
