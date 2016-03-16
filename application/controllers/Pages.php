@@ -11,7 +11,7 @@ class Pages extends CI_Controller {
             $this->load->helper('url');
         }
 
-	public function view($page = 'login')
+	public function view($page = 'show')
 	{
 		if ( ! file_exists(APPPATH.'/views/pages/'.$page.'.php'))
         {
