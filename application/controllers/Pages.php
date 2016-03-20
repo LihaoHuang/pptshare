@@ -9,6 +9,8 @@ class Pages extends CI_Controller {
             parent::__construct();
             // Your own constructor code
             $this->load->helper('url');
+            $this->load->model('Account');
+
         }
 
 	public function view($page = 'login')
@@ -29,7 +31,7 @@ class Pages extends CI_Controller {
         $this->load->view('templates/footer');
 	}
 
-    public function filedownload($name)
+    private function filedownload($name)
     {
         $this->load->helper('download');
         $data = file_get_contents("../PPT/".$name);
@@ -57,4 +59,64 @@ class Pages extends CI_Controller {
             redirect('show');
         }
     }
+    public function creat()
+    {
+        $Newname = $_POST['Newname'];
+        $Newpass = $_POST['Newpassword'];
+        $Newemail = $_POST['Newemail'];
+        $array = array('email' => $Newemail , 'password' => $Newpass,'name' => $Newname);
+        if (empty($Newname) || empty($Newpass)  || empty($Newemail) )
+        {
+            // $this->Account->creat($array);
+            echo '<script type="text/javascript">';
+            echo 'alert("欄位皆為必填");';
+            echo 'location.href="'.base_url('index.php/login').'"';
+            echo '</script>';
+        }else if(preg_match("/^([^@\s]+)@gm.nfu.edu.tw$/", $Newemail) ) 
+        {      
+
+            $this->Account->creat($array);
+            echo '<script type="text/javascript">';
+            echo 'alert("帳戶註冊成功");';
+            echo 'location.href="'.base_url('index.php/login').'"';
+            echo '</script>';
+            
+        }else
+        {
+            echo '<script type="text/javascript">';
+            echo 'alert("信箱格式不對");';
+            echo 'location.href="'.base_url('index.php/login').'"';
+            echo '</script>';
+        }
+
+        
+
+        
+
+    }
+
+    public function login(){
+        
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        
+
+        $array = array('email' => $email , 'password' => $password);
+        
+
+        if(empty($email) || empty($password) || (!( $this->Account->login($array) ) ) )
+        {
+            echo '<script type="text/javascript">';
+            echo 'alert("帳號密碼錯誤!!");';
+            echo 'location.href="'.base_url('index.php/login').'"';
+            echo '</script>';
+        }
+        else {
+            redirect('show');
+        }
+        
+
+    }
+
 }
