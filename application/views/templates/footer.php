@@ -11,6 +11,9 @@
 
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> <!-- or use local jquery -->
+    <script type="text/javascript" src="../publish/js/create.js"></script>
+
+    <!-- js -->
     <script src="<?= base_url("publish/js/jqBootstrapValidation.js")?>"></script>
 
     <script>

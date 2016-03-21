@@ -4,10 +4,10 @@ class Account extends CI_Model {
         public function __construct()
         {
                 parent::__construct();
-                $config['hostname'] = 'localhost:3306';
-                $config['username'] = 'root';
-                $config['password'] = '';
-                $config['database'] = 'ppt_share';
+                $config['hostname'] = '140.130.35.62:8082';
+                $config['username'] = '40343236';
+                $config['password'] = '40343236';
+                $config['database'] = '40343236';
                 $config['dbdriver'] = 'mysqli';
                 $config['dbprefix'] = '';
                 $config['pconnect'] = FALSE;
@@ -22,8 +22,8 @@ class Account extends CI_Model {
         public function login($data)
         {
 		$array = array('email' => $data['email'] , 'password' => $data['password']);
-		$query = $this->db->where($array)->get('comments');
+		$account = $this->db->where($array)->get('comments');
 
-                return $query->result();
+                return $account->result();
         }
 }
