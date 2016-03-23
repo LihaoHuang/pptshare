@@ -15,7 +15,7 @@ class Upload extends CI_Model {
                 $this->load->database($config); 
         }
 
-        public function upload($data)
+        public function uploadfile($data)
         {
                 $query = $this->db->insert('product',$data);
         }

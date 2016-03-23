@@ -1,20 +1,21 @@
 var filename　= "";
 function getfilename(){
     var str=document.getElementById("fileupload").value;
-    document.write(str.split("") + "<br />");
-    for(var i=12;i <　str.length;i++){
-        filename += str[i];
+    var temp = new Array;
+    temp = str.split("");
+    for(var i=12;i < temp.length;i++){
+        filename += temp[i];
+        console.log(filename);
     }
 }
 
 function uploadmassage(){
-	var member = document.getElementById("member").value;
 
         var URL = "pages/file_upload";
          
         var upload =
         {
-            "crew" : member,
+            "crew" : "ashasd",
             "filename": filename
 
         };

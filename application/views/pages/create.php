@@ -46,7 +46,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="row control-group">
                 <div class="form-group col-xs-12  controls">
                     <label for="member"><h3>報告組員 : </h3></label>
-                    <input id="member" class="form-control" placeholder="黃立豪、陳威傑、揚全環、蒙偉倫" name="member" type="text">
+                    <input id="member" class="form-control" placeholder="黃立豪、陳威傑、楊全還、蒙偉倫" name="member" type="text" >
                 </div>
             </div>
             <div class="row control-group">

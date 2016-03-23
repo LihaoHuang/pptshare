@@ -13,7 +13,7 @@ class Pages extends CI_Controller {
 
         }
 
-	public function view($page = 'create')
+	public function view($page = 'login')
 	{
 		if ( ! file_exists(APPPATH.'/views/pages/'.$page.'.php'))
         {
@@ -40,6 +40,8 @@ class Pages extends CI_Controller {
 
      public function file_upload()
     {
+        $crew = $_POST['crew'];
+        $filename = $_POST['filename'];
         $config = array(
                 'upload_path' => './PPT/',
                 'allowed_types' => 'ppt|pptx',
@@ -51,8 +53,8 @@ class Pages extends CI_Controller {
         $this->load->library('upload', $config);
 
         $uploadmassage = array(
-            'crew' => $_POST['crew'],
-            'filename' =>$_POST['filename']
+            'crew' => $crew,
+            'filename' =>$filename
             );
 
         if(!$this->upload->do_upload('fileupload')){
@@ -62,7 +64,7 @@ class Pages extends CI_Controller {
         else {
             // 若無錯誤，則上傳檔案
             $file = $this->upload->data('fileupload');
-            $this->file->upload($uploadmassage);
+            $this->file->uploadfile($uploadmassage);
             redirect('show');
         }
     }
@@ -113,7 +115,7 @@ class Pages extends CI_Controller {
         $data['account'] = $this->Account->login($array);
         
 
-        if(empty($email) || empty($password) || $data['account'] = null )
+        if(empty($email) || empty($password) || $data['account'] == null )
         {
             echo '<script type="text/javascript">';
             echo 'alert("帳號密碼錯誤!!");';
