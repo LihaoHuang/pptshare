@@ -61,27 +61,47 @@ class Pages extends CI_Controller {
     }
     public function creat()
     {
-        $Newname = $_POST['Newname'];
+        // $Newname = $_POST['Newname'];
         $Newpass = $_POST['Newpassword'];
         $Newemail = $_POST['Newemail'];
-        $array = array('email' => $Newemail , 'password' => $Newpass,'name' => $Newname);
-        if (empty($Newname) || empty($Newpass)  || empty($Newemail) )
+
+        if( (strlen($Newpass) < 7) || (strlen($Newemail) < 22) ){
+            echo '<script type="text/javascript">';
+            echo 'alert("帳號(不含信箱)、密碼長度至少7碼");';
+            echo 'location.href="'.base_url('index.php/login').'"';
+            echo '</script>';
+        }
+
+        $array = array('email' => $Newemail , 'password' => $Newpass,'flag' =>TRUE);
+
+        if( $this->Account->creat($array) ){
+            echo '<script type="text/javascript">';
+            echo 'alert("此帳號已存在");';
+            echo 'location.href="'.base_url('index.php/login').'"';
+            echo '</script>';
+        }else
         {
-            // $this->Account->creat($array);
+            $array['flag'] = FALSE;
+        }
+        
+        
+
+        if (empty($Newpass)  || empty($Newemail) )
+        {
             echo '<script type="text/javascript">';
             echo 'alert("欄位皆為必填");';
             echo 'location.href="'.base_url('index.php/login').'"';
             echo '</script>';
         }else if(preg_match("/^([^@\s]+)@gm.nfu.edu.tw$/", $Newemail) ) 
         {      
-
-            $this->Account->creat($array);
-            echo '<script type="text/javascript">';
-            echo 'alert("帳戶註冊成功");';
-            echo 'location.href="'.base_url('index.php/login').'"';
-            echo '</script>';
+                $this->Account->creat($array);
+                echo '<script type="text/javascript">';
+                echo 'alert("註冊成功!!");';
+                echo 'location.href="'.base_url('index.php/login').'"';
+                echo '</script>';
             
-        }else
+            
+        }else 
         {
             echo '<script type="text/javascript">';
             echo 'alert("信箱格式不對");';
