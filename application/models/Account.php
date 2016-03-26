@@ -17,7 +17,19 @@ class Account extends CI_Model {
 
         public function creat($data)
         {
-                $query = $this->db->insert('comments',$data);
+                if($data['flag'])
+                {
+                        $array = array('email' => $data['email']);
+                        $query = $this->db->where($array)->get('comments');
+
+                        return $query->result();
+                }else
+                {
+                        
+                        $array = array('email' => $data['email'],'password' =>$data['password']);
+                        $query = $this->db->insert('comments',$array);
+                }
+                        
         }
         public function login($data)
         {
