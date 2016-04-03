@@ -40,23 +40,34 @@ class Pages extends CI_Controller {
 
      public function file_upload()
     {
-        $crew = $_POST['crew'];
-        $filename = $_POST['filename'];
+        // $crew = $_POST['crew'];
+        // $filename = $_POST['filename'];
+        // $config = array(
+        //         'upload_path' => './PPT/',
+        //         'allowed_types' => 'ppt|pptx',
+        //         'overwrite' => TRUE
+        //     );
+        // $this->load->library('upload', $config);
+        // $uploadmassage = array(
+        //     'crew' => $crew,
+        //     'filename' =>$filename
+        //     );
+        // if(!$this->upload->do_upload('fileupload')){
+        //     // 顯示上傳錯誤
+        //        show_error($this->upload->display_errors());
+        // }
+        // else {
+        //     // 若無錯誤，則上傳檔案
+        //     $file = $this->upload->data('fileupload');
+        //     $this->file->uploadfile($uploadmassage);
+        //     redirect('show');
+        // }
         $config = array(
                 'upload_path' => './PPT/',
-                'allowed_types' => 'ppt|pptx',
+                'allowed_types' => '*',
                 'overwrite' => TRUE
-            );
-
-        // $config['file_name']     = $fileupload; // $this->$filename
-
+        );
         $this->load->library('upload', $config);
-
-        $uploadmassage = array(
-            'crew' => $crew,
-            'filename' =>$filename
-            );
-
         if(!$this->upload->do_upload('fileupload')){
             // 顯示上傳錯誤
                show_error($this->upload->display_errors());
@@ -64,7 +75,6 @@ class Pages extends CI_Controller {
         else {
             // 若無錯誤，則上傳檔案
             $file = $this->upload->data('fileupload');
-            $this->file->uploadfile($uploadmassage);
             redirect('show');
         }
     }
