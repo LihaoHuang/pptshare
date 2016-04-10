@@ -22,12 +22,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="modal-body">
                     <div>
                         <label id="heig"><input class="form-control input-lg" type="email" id="account" name="email"  placeholder="Email" ></label>
+                        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="輸入學校信箱登入註冊，範例 : 40341234@gm.nfu.edu.tw">?</button>
                     </div>
-                    <p class="help-block">輸入學校信箱登入註冊，範例 : 40341234@gm.nfu.edu.tw</p>
                     <div>
                         <label id="heig"><input class="form-control input-lg" type="password"  id="password" name="password" placeholder="Password"></label>
+                        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="輸入密碼登入註冊，長度必須大於 7 ">?</button>
                     </div>
-                    <p class="help-block">輸入密碼登入註冊，長度必須大於 7 </p>
             </div>
             <div class="modal-footer">
                 <div align="center">
@@ -50,12 +50,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div align="center" class="modal-body">
                         <div>
                             <label id="heig"><input class="form-control input-lg" type="email" id="Newaccount" name="Newemail" placeholder="Email" ></label>
+                            <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="輸入學校信箱登入註冊，範例 : 40341234@gm.nfu.edu.tw">?</button>
                         </div>
-                        <p class="help-block">輸入學校信箱註冊，範例 : 40341234@gm.nfu.edu.tw</p>
                         <div>
                             <label id="heig"><input class="form-control input-lg" type="password"  id="Newpassword" name="Newpassword" placeholder="Password" ></label>
+                            <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="輸入密碼登入註冊，長度必須大於 7 ">?</button>
                         </div>
-                        <p class="help-block">輸入密碼註冊，長度必須大於 7 </p>
                         <div id ="alert"></div>
                     </div>
                     <div class="modal-footer">
