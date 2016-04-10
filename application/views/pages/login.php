@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div align="center">
         <form action="<?=base_url("index.php/pages/login");?>" id="form1"  method="post">
             <div class="modal-header">
-                <h1>煞氣M.A.S.E. Lab 分享系統</h1>
+                <h1>M.A.S.E. Lab 分享系統</h1>
             </div>
             <div class="modal-body">
                     <div>
@@ -31,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <div class="modal-footer">
                 <div align="center">
-                    <button type="submit" class="btn btn-primary btn-lg">登入</button>
+                    <button type="submit" class="btn btn-success btn-lg">登入</button>
                     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#login_madal">沒帳號嗎? 來註冊吧!!</button>
                 </div>
             </div>
@@ -45,7 +45,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <form action="<?=base_url("index.php/pages/creat");?>" id="form2" method="post" >
                     <div align="center" class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h1 class="modal-title" id="myModalLabel">煞氣M.A.S.E. Lab 帳號註冊</h1>
+                        <h1 class="modal-title" id="myModalLabel">M.A.S.E. Lab 帳號註冊</h1>
                     </div>
                     <div align="center" class="modal-body">
                         <div>
@@ -60,8 +60,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                     <div class="modal-footer">
                         <div align="center">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
-                            <button class="btn btn-primary" type="submit">註冊</button>
+                            <button class="btn btn-success" type="submit">註冊</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">關閉</button>
                         </div>
                     </div>
                     </form>
